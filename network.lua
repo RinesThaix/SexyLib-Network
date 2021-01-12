@@ -4,21 +4,19 @@ local networks = {}
 
 local function encode(data)
     local libS = LibStub:GetLibrary("AceSerializer-3.0")
-    local libC = LibStub:GetLibrary("LibCompress")
-    local libCE = libC:GetAddonEncodeTable()
+    local libD = LibStub:GetLibrary("LibDeflate")
     local encoded = libS:Serialize(data)
-    encoded = libC:CompressHuffman(encoded)
-    return libCE:Encode(encoded)
+    encoded = libD:CompressDeflate(encoded)
+    return libD:EncodeForWoWAddonChannel(encoded)
 end
 
 local function decode(data)
     local libS = LibStub:GetLibrary("AceSerializer-3.0")
-    local libC = LibStub:GetLibrary("LibCompress")
-    local libCE = libC:GetAddonEncodeTable()
-    data = libCE:Decode(data)
-    local decrypted, err = libC:Decompress(data)
-    if not decrypted then
-        SexyLib:Logger('Sexy Lib'):LogErrorL('network_error_packet_decompression', err)
+    local libD = LibStub:GetLibrary("LibDeflate")
+    data = libD:DecodeForWoWAddonChannel(data)
+    local decrypted = libD:DecompressDeflate(data)
+    if decrypted == nil then
+        SexyLib:Logger('Sexy Lib'):LogErrorL('network_error_packet_decompression')
         return nil
     end
     local success, result = libS:Deserialize(decrypted)

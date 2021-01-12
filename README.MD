@@ -11,12 +11,12 @@ You can not only send some data to other users of your addon, but also send netw
 
 ## Requirements
 - **SexyLib-Core** is required.
+- **SexyLib-Localization** is optional, but recommended.
 - **LibStub** is required.
+- **LibDeflate** is required.
 - **AceSerializer-3.0** is required.
 - **AceComm-3.0** is required.
 - **AceAddon-3.0** is required.
-- **LibCompress** is required.
-- **SexyLib-Localization** is optional, but recommended.
 
 ## Usage
 
