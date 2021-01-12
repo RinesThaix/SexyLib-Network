@@ -42,7 +42,7 @@ function SexyLib:InitNetwork(addonName, prefixLength, defaultCallbacksTimeout, b
         initCallbacksTimer = function(self)
             local time = 0
             local callbacks = self.callbacks
-            SexyDKP:Util():NewTimer(function(sinceLastUpdate)
+            SexyLib:Util():NewTimer(function(sinceLastUpdate)
                 if sinceLastUpdate - time < 0.05 then return false end
                 time = sinceLastUpdate
                 local toBeRemoved = {}
