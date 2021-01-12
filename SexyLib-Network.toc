@@ -5,7 +5,7 @@
 ## Notes-ruRu: Модуль сети Sexy Lib
 ## Author: Konstantin Shandurenko
 ## Version: 1.0.0
-## RequiredDeps: SexyLib-Core, LibStub, AceSerializer-3.0, AceComm-3.0, AceAddon-3.0, LibCompress
+## RequiredDeps: SexyLib-Core
 ## OptionalDeps: SexyLib-Localization
 
 localization/ru.lua
