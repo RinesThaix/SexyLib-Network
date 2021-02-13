@@ -1,4 +1,4 @@
-if SexyLib.Localization and GetLocale() == 'ruRu' then
+if SexyLib.Localization and GetLocale() == 'ruRU' then
     SexyLib:Localization('Sexy Lib'):Add({
         network_error_packet_decompression = 'Ошибка декомпрессии сетевого пакета.',
         network_error_packet_deserialization = 'Ошибка десериализации сетевого пакета.',
