@@ -1,4 +1,4 @@
-## Interface: 11306
+## Interface: 20501
 ## Title: SexyLib |cFF00FF00Network
 ## Notes: Network module of Sexy Lib
 ## Title: SexyLib |cFF00FF00Сеть
